@@ -36,9 +36,9 @@ class RealServerSentEvent implements ServerSentEvent {
     private long readTimeoutMillis = 0;
 
     RealServerSentEvent(Request request, Listener listener) {
-        if (!"GET".equals(request.method())) {
-            throw new IllegalArgumentException("Request must be GET: " + request.method());
-        }
+        // if (!"GET".equals(request.method())) {
+        //     throw new IllegalArgumentException("Request must be GET: " + request.method());
+        // }
         this.originalRequest = request;
         this.listener = listener;
     }
